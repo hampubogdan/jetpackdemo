@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/settingsFragment"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Settings Menu Item" />
+
+    <item
+        android:id="@+id/menuitem2"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Details Menu Item" />
+</menu>

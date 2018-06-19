@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.hampu.jetpackdemo.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/list_fragment">
+        <action
+            android:id="@+id/detailsAction"
+            app:clearTask="false"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@animator/flip_y"
+            app:launchDocument="false"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@animator/flip_x"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/settingsAction"
+            app:clearTask="false"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchDocument="false"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.hampu.jetpackdemo.DetailsFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/details_fragment">
+        <argument
+            android:name="itemId"
+            android:defaultValue="0"
+            app:type="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.hampu.jetpackdemo.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/settings_fragment">
+        <argument
+            android:name="param1"
+            android:defaultValue="emptyParam1"
+            app:type="string" />
+        <argument
+            android:name="param2"
+            android:defaultValue="emptyParam1"
+            app:type="string" />
+    </fragment>
+    <deepLink app:uri="https://cashdog.com/sendmoney"/>
+</navigation>
